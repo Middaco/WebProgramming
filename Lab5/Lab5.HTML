@@ -1,0 +1,21 @@
+<!doctype HTML>
+
+<html>
+<head>
+	<title>Lab5</title>
+	<style>
+		body > img{
+			width: 200px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<img onmouseover="document.getElementById('big').src='thumb1.jpg'" onmouseout="document.getElementById('big').src='img1.png'" src="thumb1.jpg">
+	<img onmouseover="document.getElementById('big').src='thumb2.jpg'" onmouseout="document.getElementById('big').src='img1.png'" src="thumb2.jpg">
+	<img onmouseover="document.getElementById('big').src='thumb3.jpg'" onmouseout="document.getElementById('big').src='img1.png'" src="thumb3.jpg">
+	<div>
+		<img id="big" src="img1.png">
+	</div>
+</body>
+</html>

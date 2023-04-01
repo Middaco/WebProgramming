@@ -1,0 +1,232 @@
+<!doctype HTML>
+
+<html>
+<head>
+	<title>MyYahoo!</title>
+	<style>
+		body{
+			padding-left: 10%;
+			padding-right: 10%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			alugn-content: center;
+			align-items: center;
+		}
+		.top{
+			margin: auto;
+			width: 100%;
+			padding: 5px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			padding-top: 0px;
+			justify-content: space-between;
+		}
+		.top > .logo{
+			font-weight: bold;
+			color: purple; 
+			font-size: 50px;
+			align-self: center;	
+			flex-grow: 2;
+		}
+		.menu > li {
+			display: inline;
+		}
+		.menu{
+			padding-top: 10px;
+			padding-left: 0px;
+			margin: 0px;
+			font-weight: bold;
+			word-spacing: 20px;
+			width: 100%;
+		}
+		.top > .search_bar_container{
+			height: 40px;
+			width: 50%;
+			display: flex;
+    			align-items: center;
+			flex-grow: 7;
+		}
+
+		.search_bar_container > .search_bar{
+			border-radius: 3px 0px 0px 3px;
+			border-color: blue;
+			height: 90%;
+			width: 70%;
+			padding: 0px;
+			border-width: thin;
+		}
+		.search_bar_container > .search_bar_button{
+			height: 93%;
+			border-color: blue;
+			width: 20%;
+			background: blue;
+			border-radius: 0px 3px 3px 0px;
+			border-width: thin;
+		}
+
+		.top > .connect_button{
+			align-self: center;
+			border-radius: 20px;
+			border-color: purple;
+			padding: 1px 13px;
+			background: #ffffff;
+			flex-grow: 2;
+		}
+		.top_ad{
+			width: 70%;
+			height: 160px;
+			margin: 10px;
+			background-color: black;
+		}
+
+		.articles{
+			margin-top: 20px;
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+		}
+		.article{
+			width: 100%;
+			height: 120px;
+			margin-bottom: 10px;
+		}
+		.article > img{
+			float: left;
+			height: 100%;
+			width: 230px;
+			border-radius: 10px;
+			margin-right: 10px;
+		}
+		.article > h3{
+			display: inline;
+		}
+		.article > b{
+			color: blue;
+		}
+
+		.meteo{
+			width: 25%;
+			height: 40px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.meteo > .meteo_header{
+			width: 100%;
+		}
+		.meteo > .meteo_day{
+			width: 20%;
+			height: 70px;			
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.meteo_day > img{
+			width: 30px;
+			height: 30px;
+		}
+		.meteo > .meteo_footer{
+			width: 100%;
+		}
+		
+
+		.main_container{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			
+		}
+		a{
+			text-decoration-line: none;
+			color: black;
+			font-weight: bold;
+			font-family: Sans-serif;
+			font-size: 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="top">
+		<text class="logo">yahoo!</text>
+		<div class = "search_bar_container">
+			<input class="search_bar" type="text">
+			<button class="search_bar_button"></button>
+		</div>
+		<button class="connect_button"><text style="font-weight: bold; color: purple;">Conectare</button>
+		<a class="connect_button" href="#">Mail</a>
+		<ul class="menu">
+			<li><a href="#">Mail</a></li>
+			<li><a href="#">Stiri</a></li>
+			<li><a href="#">Sporturi</a></li>
+			<li><a href="#">Mobile</a></li>
+			<li><a href="#">Vreme</a></li>
+			<li style="word-spacing: 0px"><a href="#">Mai multe...</a></li>
+		</ul>
+	</div>
+
+	<div class="top_ad">
+		<text style="color=white;">Some ad here.</text>
+	</div>
+	
+	<div class="main_container">
+	<div class="articles">
+		<div class="article">
+			<img src="Article1.png" alt="Article">
+			<b>Stiri</b> &emsp; IMPACT<br>
+			<h3>Noul Cod Rutier2022: Greseala care te poate costa 725 de lei. Toti Soferii risca sa primeasca amenda daca sunt vazuti de politisti</h3><br>
+			Noul Cod Rutier 2022. Aceasta este greseala care te poate costa 725 de lei. Toti soferii risca sa primeasca amenda daca sunt vazuti de politisti.
+		</div>
+		<div class="article">
+			<img src="Article2.png" alt="Article">
+			<b>Anunt</b> &emsp; KAUFLAND<br>
+			<h3>Revista Digitala Kaufland</h3><br>
+			O poti rasfoi oricand, de pe orice dispozitive, la doar un click distanta!
+		</div>
+		<div class="article">
+			<img src="Article3.png" alt="Article">
+			<b>Stiri</b> &emsp; REPUBLICA<br>
+			<h3>O ucraineanca, mama a patru copii, care se afla in tranzit in Romania a postat pe Facebook o intamplare emotionanta</h3><br>
+			O ucraineanca, mama a patru copii, care se afla in tranzit in Romania a postat pe Facebook o intamplare emotionanta, momentul in care un barbat roman i-a dat 200 de lei.
+		</div>
+	</div>
+	<div class="meteo">
+		<div class="meteo_header">
+			<b>Meteo</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Cluj-Napoca
+		</div>
+		<div class="meteo_day">
+			<b>Azi</b>
+			<img src="https://s.yimg.com/cv/apiv2/200510/w/l/clear_day.png">
+			1°&nbsp;10°
+		</div>
+		<div class="meteo_day">
+			<b>Mar</b>
+			<img src="https://s.yimg.com/cv/apiv2/200510/w/l/clear_day.png">
+			1°&nbsp;10°
+		</div>
+		<div class="meteo_day">
+			<b>Mier</b>
+			<img src="https://s.yimg.com/cv/apiv2/200510/w/l/clear_day.png">
+			1°&nbsp;10°
+		</div>
+		<div class="meteo_day">
+			<b>Joi</b>
+			<img src="https://s.yimg.com/cv/apiv2/200510/w/l/clear_day.png">
+			1°&nbsp;10°
+			
+		</div>
+		<div class="meteo_footer">
+			<a href="#">Vedeti mai multe >></a>
+		</div>
+	</div>
+	</div>
+	
+</body>
+</html>

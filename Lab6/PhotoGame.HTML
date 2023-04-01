@@ -1,0 +1,74 @@
+<!doctype HTML>
+
+<html>
+<head>
+	<title>The Photo Game</title>
+	<style>
+		.playtable{
+			width: 98vw;
+			height: 97vh;
+		}
+		img{
+			height: 40%;
+			position: absolute;
+			border-radius: 100%;
+		}
+	</style>
+	<script src="jquery-3.6.0.js"></script>
+	<script>
+		$(document).ready(function(){
+			var img = $("<img>");
+			var sc = 0;
+			img.attr({
+				"src" : "img1.jpg",
+			});
+
+			var positions = [["60%","86%"],["30%","40%"],["15%","17%"],["57%","80%"],["34%","36%"],["55%","12%"],["30%","5%"],["28%","78%"],["39%","20%"],["56%","49%"],["22%","22%"],["56%","45%"],["45%","56%"],["32%","32%"],["2%","9%"],["2%","80%"],["30%","40%"],["17%","50%"],["40%","60%"],["60%","50%"],["20%","20%"],["40%","40%"],["10%","10%"],["10%","20%"],["20%","30%"],["60%","70%"],["40%","20%"],["60%","40%"],["55%","25%"],["44%","33%"],["54%","23%"],["12%","75%"],["43%","84%"]];
+			var current_pos = 0;
+
+			function change_pos(){
+				if (current_pos == 33)
+					current_pos = 0
+				img.css({
+					"top" : positions[current_pos][0],
+					"left" : positions[current_pos][1]
+				})
+				current_pos+=1
+			};
+			change_pos();
+
+			//max: top:60% left:86%
+			
+			img.appendTo(".playtable");
+			
+
+			function fade() {
+				img.fadeIn(500)
+				img.fadeOut(500, fade)
+				change_pos()
+			}
+			fade();
+
+			function check() {
+				if (sc==10){
+				alert("Ai castigat!")
+				img.stop()
+				}
+			}
+			
+			
+			img.click(function(){
+				sc += 1;
+				console.log(sc);
+				img.hide();
+				check();
+			});	
+		});
+	</script>
+</head>
+<body>
+	<div class="playtable">
+		
+	</div>
+</body>
+</html>

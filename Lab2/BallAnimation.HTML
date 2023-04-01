@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Ball Animation</title>
+		<style>
+			#playground{
+				width: 100px;
+				height: 85vh;
+				position: relative;
+				margin: auto;
+			}
+			#ball{
+				background-color: green;
+				border-radius: 100%;
+				height: 100px;
+				width: 100px;
+				animation: bounce 2s infinite;
+				position: absolute;
+				animation-direction: alternate;
+				animation-play-state: paused;
+				animation-timing-function: ease-in;
+			}
+			div#playground:hover #ball{
+				animation-play-state: running;
+			}
+
+			@keyframes bounce {
+  				from {top: 0px;}
+  				to {top: 100%;}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="playground">
+			<div id="ball"></div>
+		</div>
+	</body>
+</html>
